@@ -1,83 +1,104 @@
-import { BookOpen, Monitor, ClipboardCheck, Navigation, MapPin } from 'lucide-react'
-import { AnimatedIcon } from '@/components/ui/AnimatedIcon'
+"use client"
 
-export function Overview() {
+import { BookOpen, CheckCircle, GraduationCap, ArrowRight, Plane, MapPin, Globe, Sparkles, ArrowUpRight } from 'lucide-react'
+import { AnimatedIcon } from '@/components/ui/AnimatedIcon'
+import { PortableText } from 'next-sanity'
+import { useState } from 'react'
+import { cn } from '@/lib/utils'
+
+interface OverviewProps {
+    description?: any
+    universities?: string[]
+    classes?: string[]
+}
+
+export function Overview({ description, universities, classes }: OverviewProps) {
     return (
         <section id="overview" className="scroll-mt-32">
-            <h2 className="text-2xl font-bold mb-6 font-heading text-slate-900 border-l-4 border-primary pl-4">About Us</h2>
-            <div className="prose max-w-none text-slate-600 leading-relaxed font-sans">
-                <p>Global Education Services is a premier educational consultancy based in Kathmandu, Nepal. Since our inception, we have been committed to helping Nepalese students realize their dreams of studying abroad. We provide comprehensive guidance and support throughout the entire application process, ensuring that every student makes an informed decision about their future.</p>
-                <p className="mt-4">Our team of experienced counselors offers personalized advice, from selecting the right course and university to preparing for entrance exams and navigating visa requirements. We partner with top-tier institutions worldwide to bring you the best opportunities for global education.</p>
-            </div>
-        </section>
-    )
-}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start">
+                <div className="md:col-span-12 lg:col-span-4 lg:sticky lg:top-32">
+                    <h2 className="text-3xl md:text-5xl font-black font-heading text-slate-900 leading-[0.95] tracking-tight mb-8">
+                        We build<br className="hidden md:block" />
+                        <span className="text-blue-600 block md:inline"> Futures.</span>
+                    </h2>
 
-export function StatsGrid() {
-    return (
-        <section className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-                { label: 'Years Experience', value: '15+' },
-                { label: 'Students Sent', value: '5000+' },
-                { label: 'Visa Success Rate', value: '98%' },
-                { label: 'Partner Universities', value: '50+' }
-            ].map((stat, i) => (
-                <div key={i} className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] flex flex-col items-center text-center border border-slate-100 hover:border-primary/20 hover:shadow-lg transition-all hover:-translate-y-1 group">
-                    <span className="text-4xl font-extrabold text-slate-900 mb-2 font-heading group-hover:text-primary transition-colors">{stat.value}</span>
-                    <span className="text-sm font-bold text-slate-500 uppercase tracking-wider">{stat.label}</span>
-                </div>
-            ))}
-        </section>
-    )
-}
-
-export function ServicesList() {
-    return (
-        <section id="services" className="scroll-mt-32">
-            <h2 className="text-2xl font-bold mb-8 font-heading text-slate-900 border-l-4 border-primary pl-4">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="p-8 rounded-2xl bg-white border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
-                    <div className="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
-                        <AnimatedIcon icon={BookOpen} className="h-7 w-7" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 font-heading text-slate-900 group-hover:text-primary transition-colors">IELTS Preparation</h3>
-                    <p className="text-sm text-slate-500 leading-relaxed">Intensive coaching with expert instructors and regular mock tests to ensure high band scores.</p>
-                </div>
-                <div className="p-8 rounded-2xl bg-white border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
-                    <div className="size-14 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 mb-6 group-hover:scale-110 transition-transform">
-                        <AnimatedIcon icon={Monitor} className="h-7 w-7" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 font-heading text-slate-900 group-hover:text-primary transition-colors">PTE Academic</h3>
-                    <p className="text-sm text-slate-500 leading-relaxed">State-of-the-art computer labs and personalized strategies for PTE success.</p>
-                </div>
-                <div className="p-8 rounded-2xl bg-white border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
-                    <div className="size-14 bg-teal-50 rounded-xl flex items-center justify-center text-teal-600 mb-6 group-hover:scale-110 transition-transform">
-                        <AnimatedIcon icon={ClipboardCheck} className="h-7 w-7" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 font-heading text-slate-900 group-hover:text-primary transition-colors">Visa Counseling</h3>
-                    <p className="text-sm text-slate-500 leading-relaxed">End-to-end support for visa documentation, financial planning, and interview preparation.</p>
-                </div>
-            </div>
-        </section>
-    )
-}
-
-export function CountriesList() {
-    return (
-        <section id="countries" className="scroll-mt-32">
-            <h2 className="text-2xl font-bold mb-8 font-heading text-slate-900 border-l-4 border-primary pl-4">Destinations</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                {[
-                    { name: 'Australia', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCn8JBHM4ozJFXzo6p5rNa0dVBcG4KRjGOwp9M6sRLX_3H4KLgbpWH-xiIQ106r1mJ92hjHAh8EU4RjHXBjl2MzSaX5p5jNXQQTvuYF2r1Z-pKpq7t8miUNKT_5h0pe30QYRlGYnmhsB7-U6ESn1U7BBTelyGAf5ePXfjEKCr5_GzWx3kSIA8wHqVeTGNESnxCN38Pt7KN8pEkxzOz6CFyqAb140CQ_81Dl6YpvRuI5VYIxWkqK8fT2UhKuXtAf10P0hSiqWy9oqOMU' },
-                    { name: 'Canada', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB04wY_pA-UzkUriRk3fi0LE5XADRS7tHArPGdMOPeEl3MWqZYKrGMg_F6ulOfQOh39TGy6FNci_sQKHHsjrTANHp4zxfYAoMb292zLfiGAOI_uo1yIG48wUnkGqBYk2e9tJeIro5SEueTR895Yt5uYd26OyDBBvKSwEl2nwKXZFNB8pjOxZR0ureQF5_0Lb62idnHH_itaO00sq9j__GCF3fcFbCYvUhvg7z4Q9z6nC4jU807psyyL9Nr74x5FWeszAwnQHQhXFbOO' },
-                    { name: 'USA', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD8cgwsx0VqHZ7AG3jNYdlJ6W3v2EfcQ8QwEKvCsjhmtSPijYJTK-pJBUdIF6Oi3a5eUOm816Rc8CTHTDeP3B30Hnu1yyFhccrpxXSEenADpKmOFeuJM662BUsCG8LXiOBy0MHrLcp4VHALt2p9CyHYEE9uvM7rqc_Nxt-huMpAjr80UalpUJuoY9zsTgSVv9eFkuQtzFc_oQC6tVEK9sjxfj3FigrwjbQBexrMMle21PbNWwjfc-QgK2X38NrqKPK0US4hAxGyF-11' },
-                    { name: 'United Kingdom', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD3Hn1lWiJJT3gYtB_xVuge8d6J3NVad0EASOWV1_nqM9S-Twyk43sV2gkbubkbhwD1zUfGf_FK9VBtgMRtcQK7pqAyZ0fMAVRco4FYmfeTXsEqgI7VNs2EF5QjDzBVAqwwVIrPmorcXSSZp4qmGrurGesy7oI1owWk8hJ8Iu2YayQ0ajF3Q7EuLYGulheMv1TNlntRasmo2OcYg0CpmA0XjrayD2YYLg6DlbHVmylQ82s3nS4DJVx1L1OJGAxBGxZo3N6qQl54gUA6' }
-                ].map((country) => (
-                    <div key={country.name} className="flex flex-col items-center gap-4 group cursor-pointer">
-                        <div className="size-28 rounded-full border-4 border-white shadow-lg overflow-hidden bg-slate-100 flex items-center justify-center ring-1 ring-slate-100 group-hover:scale-110 transition-transform duration-500">
-                            <img alt={`${country.name} Flag`} className="w-full h-full object-cover" src={country.img} />
+                    {/* Cleaner List - No Box */}
+                    <div className="space-y-6 border-t border-slate-100 pt-6">
+                        <div className="flex flex-col gap-1">
+                            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Focus</span>
+                            <span className="font-bold text-slate-900 text-lg flex items-center gap-2">
+                                <GraduationCap className="w-5 h-5 text-blue-600" /> University Admissions
+                            </span>
                         </div>
-                        <span className="font-bold text-slate-700 font-heading group-hover:text-primary transition-colors">{country.name}</span>
+                        <div className="flex flex-col gap-1">
+                            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Network</span>
+                            <span className="font-bold text-slate-900 text-lg flex items-center gap-2">
+                                <MapPin className="w-5 h-5 text-emerald-600" /> Global Offices
+                            </span>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Training</span>
+                            <span className="font-bold text-slate-900 text-lg flex items-center gap-2">
+                                <BookOpen className="w-5 h-5 text-purple-600" /> Expert Test Prep
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="md:col-span-12 lg:col-span-8">
+                    <div className="prose prose-lg prose-slate max-w-none text-slate-600 leading-8">
+                        <PortableText value={description} />
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+interface ServicesListProps {
+    services?: { title: string; description?: string; icon?: any }[]
+}
+
+export function ServicesList({ services }: ServicesListProps) {
+    /* Editorial List Design: Numbered, Divider-separated rows. High-end Magazine feel. */
+    if (!services || services.length === 0) return null
+
+    return (
+        <section id="services" className="scroll-mt-32 border-t border-slate-900 pt-16">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-16 gap-6">
+                <h2 className="text-3xl md:text-5xl font-black font-heading text-slate-900 tracking-tight">
+                    Our Services
+                </h2>
+                <div className="text-slate-500 font-medium md:max-w-xs text-right hidden md:block">
+                    Comprehensive support for every step of your journey abroad.
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-0">
+                {services.map((service, idx) => (
+                    <div key={idx} className="group flex flex-col md:flex-row md:items-start gap-6 md:gap-12 py-10 border-b border-slate-200 hover:border-slate-900 transition-colors duration-500 cursor-default">
+                        {/* 01. Number */}
+                        <div className="hidden md:block text-sm font-bold text-slate-300 md:w-12 pt-1 group-hover:text-blue-600 transition-colors">
+                            {(idx + 1).toString().padStart(2, '0')}
+                        </div>
+
+                        {/* Title & Description */}
+                        <div className="flex-1">
+                            <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors flex items-center gap-3">
+                                {service.title}
+                                <ArrowRight className="w-5 h-5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-blue-600" />
+                            </h3>
+                            <p className="text-slate-500 leading-relaxed text-lg max-w-2xl">
+                                {service.description || `Expert guidance and personalized support to ensure your success in ${service.title.toLowerCase()}.`}
+                            </p>
+                        </div>
+
+                        {/* Icon (Subtle) */}
+                        <div className="md:w-32 flex justify-end">
+                            <div className="size-12 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
+                                <Sparkles className="w-5 h-5" />
+                            </div>
+                        </div>
                     </div>
                 ))}
             </div>
@@ -85,27 +106,54 @@ export function CountriesList() {
     )
 }
 
-export function LocationMap() {
+interface CountriesListProps {
+    countries?: { name: string; flag?: string }[]
+}
+
+
+
+export function CountriesList({ countries }: CountriesListProps) {
+    if (!countries || countries.length === 0) return null
+
     return (
-        <section id="location" className="scroll-mt-32">
-            <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold font-heading text-slate-900 border-l-4 border-primary pl-4">Main Office Location</h2>
-                <span className="text-sm text-primary font-bold flex items-center gap-1.5 cursor-pointer hover:underline bg-primary/5 px-3 py-1.5 rounded-lg transition-colors hover:bg-primary/10">
-                    <AnimatedIcon icon={Navigation} className="h-4 w-4" /> Get Directions
-                </span>
-            </div>
-            <div className="w-full h-[450px] rounded-3xl overflow-hidden shadow-xl bg-slate-100 relative group">
-                {/* Map Placeholder */}
-                <div
-                    className="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-100 transition-opacity duration-700"
-                    style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBzzKzU6aov0CFtTo3GgcIlLsdxoR9rONZakCcqWH2D1QP1WsOQVBwhtZwpYcHp1-PaqfGVBHGd9n2_kjKjzAYPzMYlj5in47lLPuumPTvpCfJG4cchgTjbFnqEjY_rPTeRbWXsH2N93cGXBpeuP4RpI5BSuF8c3TUFxBrui6rIjp0wm43Ac4aMZiUtwb2kRJVU9zcmleAMKALBXhWE55r35Bp3OgZeNbZ5erhji4fEYRdWaW69RHjFPbaNjZailDTHhre0fe8XUcwi")' }}
-                />
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div className="bg-white p-5 rounded-2xl shadow-2xl border border-white/50 flex flex-col items-center animate-in fade-in zoom-in duration-500">
-                        <MapPin className="h-8 w-8 text-primary mb-2 fill-primary/20" />
-                        <span className="font-bold text-slate-900">Global Education Services HQ</span>
-                        <span className="text-xs text-slate-500 font-medium mt-0.5">Putalisadak, Kathmandu</span>
-                    </div>
+        <section id="countries" className="scroll-mt-32 pt-12 pb-12 md:pb-24">
+            <div className="max-w-7xl mx-auto">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 border-b border-slate-100 pb-4">
+                    <h3 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
+                        <Globe className="w-6 h-6 text-slate-400" />
+                        Study Destinations
+                    </h3>
+                    <p className="text-slate-500 font-medium">
+                        Explore opportunities in these countries
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                    {countries.map((country) => (
+                        <div
+                            key={country.name}
+                            className="group bg-white border border-slate-200 rounded-xl p-4 flex items-center gap-4 hover:border-blue-500 hover:shadow-md hover:shadow-blue-500/5 transition-all duration-300 cursor-pointer"
+                        >
+                            {/* Flag Circle */}
+                            <div className="shrink-0 size-12 rounded-full bg-slate-50 border border-slate-100 overflow-hidden relative group-hover:ring-2 group-hover:ring-blue-500/20 transition-all">
+                                {country.flag && country.flag !== 'nan' ? (
+                                    <img src={country.flag} alt={country.name} className="w-full h-full object-cover" />
+                                ) : (
+                                    <div className="w-full h-full flex items-center justify-center bg-slate-100">
+                                        <Globe className="w-6 h-6 text-slate-300 group-hover:text-blue-500 transition-colors" />
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Name & Arrow */}
+                            <div className="flex-1 flex items-center justify-between">
+                                <h4 className="font-bold text-slate-900 group-hover:text-blue-700 transition-colors">
+                                    {country.name}
+                                </h4>
+                                <ArrowUpRight className="w-4 h-4 text-slate-300 group-hover:text-blue-600 transition-colors" />
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

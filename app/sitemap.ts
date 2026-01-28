@@ -7,13 +7,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const staticRoutes = [
         '',
         '/consultancies',
-        '/services',
+
         '/countries',
         '/blog',
         '/process-updates',
         '/compare',
         '/methodology',
-        '/about',
+
         '/privacy',
     ].map((route) => ({
         url: `${baseUrl}${route}`,

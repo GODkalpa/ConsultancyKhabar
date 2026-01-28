@@ -26,7 +26,7 @@ import {
 } from './types'
 
 // Revalidation constants
-const REVALIDATE_TIME = 3600 // 1 hour default
+const REVALIDATE_TIME = 0 // 0 for dev (was 3600)
 const TAGS = {
     settings: 'siteSettings',
     consultancies: 'consultancy',

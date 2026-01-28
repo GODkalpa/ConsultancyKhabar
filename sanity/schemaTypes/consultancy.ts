@@ -100,6 +100,18 @@ export const consultancy = defineType({
             },
         }),
         defineField({
+            name: 'universities',
+            title: 'Universities',
+            type: 'array',
+            of: [{ type: 'string' }],
+        }),
+        defineField({
+            name: 'classes',
+            title: 'Classes',
+            type: 'array',
+            of: [{ type: 'string' }],
+        }),
+        defineField({
             name: 'websiteUrl',
             title: 'Website URL',
             type: 'url',
@@ -136,6 +148,11 @@ export const consultancy = defineType({
             validation: (Rule) => Rule.required(),
         }),
         defineField({
+            name: 'googleReviewsUrl',
+            title: 'Google Reviews URL',
+            type: 'url',
+        }),
+        defineField({
             name: 'rankingScore',
             title: 'Ranking Score (0-100)',
             type: 'number',
@@ -147,6 +164,7 @@ export const consultancy = defineType({
             type: 'object',
             fields: [
                 defineField({ name: 'googleReviews', title: 'Google Reviews Score', type: 'number' }),
+                defineField({ name: 'reviewCount', title: 'Review Count', type: 'number' }),
                 defineField({ name: 'verification', title: 'Verification Score', type: 'number' }),
                 defineField({ name: 'services', title: 'Services Score', type: 'number' }),
                 defineField({ name: 'notes', title: 'Notes', type: 'text' }),

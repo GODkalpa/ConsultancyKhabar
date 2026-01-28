@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { ArrowRight, Star, StarHalf, BadgeCheck, Building2 } from 'lucide-react'
+import { ArrowRight, Star, StarHalf, BadgeCheck, GraduationCap } from 'lucide-react'
 import { AnimatedIcon } from '@/components/ui/AnimatedIcon'
-import { getSiteSettings, getAllConsultancies } from '@/lib/sanity/api'
+import { getAllConsultancies } from '@/lib/sanity/api'
 import { Consultancy } from '@/lib/sanity/types'
 
 type ConsultancyCardProps = {
@@ -66,44 +66,46 @@ function ConsultancyCard({ consultancy }: ConsultancyCardProps) {
     )
 }
 
-export async function FeaturedConsultancies() {
-    // Try to get featured consultancies from site settings first
-    const siteSettings = await getSiteSettings()
-    let consultancies: Consultancy[] = siteSettings?.featuredConsultancies || []
+export async function IeltsPteConsultancies() {
+    const allConsultancies = await getAllConsultancies()
 
-    // If no featured consultancies in settings, get all and take first 4
-    if (consultancies.length === 0) {
-        const allConsultancies = await getAllConsultancies()
-        consultancies = allConsultancies
-            .filter(c => c.isFeatured || c.verificationBadge === 'verified')
-            .slice(0, 4)
-    }
+    // Filter consultancies that offer IELTS or PTE
+    // We check the services array for titles containing "IELTS" or "PTE"
+    const consultancies = allConsultancies
+        .filter(c => {
+            if (!c.services) return false;
+            return c.services.some(service => {
+                const title = service.title?.toLowerCase() || '';
+                return title.includes('ielts') || title.includes('pte');
+            });
+        })
+        .slice(0, 4); // Limit to 4 items like other sections
 
     return (
         <section className="mb-24">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
                 <div>
-                    <h2 className="text-2xl md:text-3xl font-bold text-slate-900 font-heading tracking-tight mb-2">Featured Consultancies</h2>
-                    <p className="text-slate-500 text-base md:text-lg">Top rated expert agencies in study abroad counseling</p>
+                    <h2 className="text-2xl md:text-3xl font-bold text-slate-900 font-heading tracking-tight mb-2">IELTS/PTE Preparation</h2>
+                    <p className="text-slate-500 text-base md:text-lg">Top consultancies for language proficiency classes</p>
                 </div>
                 <Link href="/consultancies" className="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all group bg-primary/5 px-4 py-2 rounded-lg hover:bg-primary/10 w-fit">
-                    View All Agencies <ArrowRight className="h-4 w-4" />
+                    View All <ArrowRight className="h-4 w-4" />
                 </Link>
             </div>
 
             {consultancies.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {consultancies.slice(0, 4).map((consultancy) => (
+                    {consultancies.map((consultancy) => (
                         <ConsultancyCard key={consultancy._id} consultancy={consultancy} />
                     ))}
                 </div>
             ) : (
                 <div className="text-center py-16 bg-slate-50 rounded-2xl">
                     <div className="size-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Building2 className="h-8 w-8 text-slate-400" />
+                        <GraduationCap className="h-8 w-8 text-slate-400" />
                     </div>
-                    <h3 className="text-lg font-bold text-slate-700 mb-2">No Consultancies Yet</h3>
-                    <p className="text-slate-500">Featured consultancies will appear here once added.</p>
+                    <h3 className="text-lg font-bold text-slate-700 mb-2">No Classes Found</h3>
+                    <p className="text-slate-500">Consultancies with IELTS/PTE classes will appear here.</p>
                 </div>
             )}
         </section>

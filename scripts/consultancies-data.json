@@ -1,0 +1,940 @@
+[
+  {
+    "name": "AECC Global",
+    "address": "Kamal Pokhari, Kathmandu, Nepal",
+    "phone": "+977-01-5903404",
+    "website": "https://www.aeccglobal.com",
+    "email": "info.np@aeccglobal.com",
+    "description": "AECC Global is an educational and immigration consultancy with a global footprint, offering holistic guidance for study abroad aspirants in countries like Australia, Canada, UK, Singapore, Italy, Sri Lanka, India, USA and New Zealand.",
+    "services": [
+      "Counselling",
+      "test preparation",
+      "application assistance",
+      "visa processing",
+      "scholarship guidance",
+      "pre-departure support"
+    ],
+    "classes": [
+      "IELTS",
+      "PTE",
+      "GRE",
+      "TOEFL",
+      "SAT",
+      "Duolingo"
+    ],
+    "countries": [
+      "Australia",
+      "Canada",
+      "United Kingdom",
+      "Singapore",
+      "Italy",
+      "Sri Lanka",
+      "India",
+      "USA",
+      "New Zealand"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Edwise Foundation",
+    "address": "Subhashree Complex 6th & 7th floor, New Plaza Rd, Kathmandu, Nepal",
+    "phone": "+977-1-4524916",
+    "website": "https://www.edwisefoundation.com",
+    "email": "info@edwisefoundation.com",
+    "description": "Edwise Foundation, established in 2005, guides students to prestigious universities in the USA, Canada, Australia and the UK. It offers elite test preparation, personalized academic advising, visa assistance and scholarship guidance.",
+    "services": [
+      "Academic and career advising",
+      "test preparation",
+      "visa and immigration guidance",
+      "financial aid/scholarship assistance",
+      "application processing"
+    ],
+    "classes": [
+      "TOEFL",
+      "IELTS",
+      "SAT",
+      "GRE",
+      "GMAT"
+    ],
+    "countries": [
+      "United States",
+      "Canada",
+      "Australia",
+      "United Kingdom"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Education Tree Global",
+    "address": "Kamalpokhari, Kathmandu (Opposite City Centre), Nepal",
+    "phone": "+977-01-5911945",
+    "website": "https://educationtreeglobal.com",
+    "email": "enquiry@educationtreeglobal.com",
+    "description": "Education Tree Global (ETG) was launched in 2021 by professionals with 15+ years of experience in overseas education. It provides comprehensive support for enrollment and visa processes and aims to create limitless opportunities for individuals pursuing higher education abroad.",
+    "services": [
+      "Guidance on scholarship",
+      "application service",
+      "student health care",
+      "visa counselling",
+      "admission counselling"
+    ],
+    "classes": [
+      "IELTS",
+      "TOEFL",
+      "SAT",
+      "GRE",
+      "GMAT",
+      "PTE"
+    ],
+    "countries": [
+      "Australia",
+      "New Zealand",
+      "United Kingdom",
+      "United States",
+      "Canada",
+      "Europe"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Education Asia",
+    "address": "Level 5 Share Market Complex, Putalisadak, Kathmandu, Nepal",
+    "phone": "+977-9801115600",
+    "website": "https://www.educationasia.com",
+    "email": "info@educationasia.com",
+    "description": "With nearly two decades of experience, Education Asia provides profile screening, university selection, financial guidance and visa preparation for students. It offers test preparation and helps students study in major destinations.",
+    "services": [
+      "Profile screening",
+      "university selection",
+      "financial guidance",
+      "visa preparation",
+      "test preparation"
+    ],
+    "classes": [
+      "IELTS",
+      "PTE",
+      "Duolingo",
+      "SAT",
+      "TOEFL"
+    ],
+    "countries": [
+      "Australia",
+      "Canada",
+      "United States",
+      "United Kingdom",
+      "New Zealand",
+      "Ireland",
+      "Germany",
+      "Japan"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Global Reach Education Consultancy",
+    "address": "Punya Mansion, Dillibazar, Kathmandu, Nepal",
+    "phone": "+977-01-4544081",
+    "website": "https://globalreachnepal.com",
+    "email": "ktmpromote@globalreachonline.com",
+    "description": "Global Reach is a multinational education consultancy with over 32 years of experience and partnerships with universities across the world. It provides counseling and application services to students seeking education overseas.",
+    "services": [
+      "University and course selection",
+      "application processing",
+      "visa guidance",
+      "career counselling",
+      "scholarship assistance"
+    ],
+    "classes": [
+      "IELTS",
+      "TOEFL",
+      "SAT",
+      "PTE and other test prep courses"
+    ],
+    "countries": [
+      "Australia",
+      "Canada",
+      "United States",
+      "United Kingdom",
+      "New Zealand",
+      "Ireland and many European and Asian countries"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Mentor Institute Pvt. Ltd.",
+    "address": "New Baneshwor, Kathmandu, Nepal",
+    "phone": "+977-011665444",
+    "website": "https://mentornepal.edu.np",
+    "email": "info@mentornepal.edu.np",
+    "description": "Mentor Institute has been providing education consultancy services since 2003. It offers counselling, test preparation and visa assistance, helping students choose courses and destinations.",
+    "services": [
+      "Education counselling",
+      "visa assistance",
+      "application processing",
+      "test preparation"
+    ],
+    "classes": [
+      "CAE",
+      "SAT",
+      "OET",
+      "IELTS",
+      "PTE",
+      "GRE",
+      "TOEFL"
+    ],
+    "countries": [
+      "Australia",
+      "Canada",
+      "United States",
+      "United Kingdom and other countries"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Goreto Education Consultancy",
+    "address": "New Baneshwor, Kathmandu, Nepal",
+    "phone": "+977-01-4583252",
+    "website": "https://goreto.edu.np",
+    "email": "goretoedu@gmail.com",
+    "description": "Goreto is a leading consultancy with more than a decade of service. It provides guidance in selecting universities, visa assistance and test preparation for Nepali students seeking education abroad.",
+    "services": [
+      "University and course selection",
+      "application assistance",
+      "visa processing",
+      "counselling"
+    ],
+    "classes": [
+      "TOEFL",
+      "IELTS",
+      "GRE",
+      "GMAT",
+      "SAT"
+    ],
+    "countries": [
+      "Australia",
+      "Canada",
+      "United States",
+      "United Kingdom",
+      "New Zealand and other countries"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "CIC Education Hub",
+    "address": "Putalisadak, Kathmandu, Nepal",
+    "phone": "+977-01-5332841",
+    "website": "https://www.ciceducationhub.com",
+    "email": "ciceduhub@gmail.com",
+    "description": "CIC Education Hub specialises in study‑abroad programs for Canada. It provides study permit counselling, test preparation, visa processing and pre‑departure sessions.",
+    "services": [
+      "Study permit counselling",
+      "test preparation",
+      "visa processing",
+      "pre‑departure sessions"
+    ],
+    "classes": [
+      "IELTS",
+      "PTE",
+      "SAT and other test prep"
+    ],
+    "countries": [
+      "Canada (primary)",
+      "also Australia",
+      "United States",
+      "United Kingdom and others"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Expert Education & Visa Services",
+    "address": "Level 4, Thapa Complex, Maharajgunj, Kathmandu, Nepal",
+    "phone": "+977-01-4016984",
+    "website": "https://experteducation.com.au",
+    "email": "maharajgunj@experteducation.com.au",
+    "description": "Expert Education & Visa Services is a global education and migration consultancy operating in multiple countries. It offers comprehensive services from course selection to visa application and has offices in Nepal.",
+    "services": [
+      "Counselling",
+      "test preparation",
+      "application assistance",
+      "visa services",
+      "pre‑departure support"
+    ],
+    "classes": [
+      "IELTS",
+      "PTE",
+      "TOEFL",
+      "SAT and other test preparation courses"
+    ],
+    "countries": [
+      "Australia",
+      "Canada",
+      "United States",
+      "United Kingdom",
+      "New Zealand and many other destinations"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Golden Wattle Education Consultancy",
+    "address": "Batule Ghar, Dillibazar, Kathmandu, Nepal",
+    "phone": "+977-01-4416779",
+    "website": "https://goldenwattle.com.np",
+    "email": "info@goldenwattle.com.np",
+    "description": "Golden Wattle Education Consultancy specialises in studying in Australia, the UK, Canada and the USA. It offers application, visa and accommodation assistance and conducts various test preparation classes.",
+    "services": [
+      "Education counselling",
+      "application and admission assistance",
+      "visa processing",
+      "accommodation guidance",
+      "pre‑departure briefing"
+    ],
+    "classes": [
+      "IELTS",
+      "PTE",
+      "GRE",
+      "TOEFL",
+      "CAE",
+      "SAT",
+      "OET",
+      "GMAT"
+    ],
+    "countries": [
+      "Australia",
+      "United Kingdom",
+      "Canada",
+      "United States",
+      "New Zealand"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Kangaroo Education Foundation",
+    "address": "Putalisadak, Kathmandu, Nepal",
+    "phone": "+977-01-4233102",
+    "website": "https://www.kangarooedu.com",
+    "email": "info@kangarooedu.com",
+    "description": "Kangaroo Education Foundation (KEF) is an education consultancy specialising in sending students to New Zealand since 2007. It also provides guidance for the UK, Australia, USA and Canada.",
+    "services": [
+      "Personalised counselling",
+      "test preparation",
+      "visa assistance",
+      "application processing"
+    ],
+    "classes": [
+      "IELTS",
+      "PTE",
+      "TOEFL",
+      "SAT",
+      "GMAT",
+      "GRE"
+    ],
+    "countries": [
+      "New Zealand",
+      "Australia",
+      "United Kingdom",
+      "United States",
+      "Canada"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Mission USA Education Consultancy",
+    "address": "Sai Sadan Building, Putalisadak, Kathmandu, Nepal",
+    "phone": "+977-01-4104081",
+    "website": "https://missionamerica.edu.np",
+    "email": "info@missionamerica.edu.np",
+    "description": "Mission USA Education Consultancy has been operating for more than 15 years, recruiting students to the USA, Australia, India and Canada. It provides test preparation and visa support services.",
+    "services": [
+      "Course and college selection",
+      "application processing",
+      "documentation guidance",
+      "visa assistance"
+    ],
+    "classes": [
+      "IELTS",
+      "SAT",
+      "TOEFL",
+      "GMAT",
+      "GRE"
+    ],
+    "countries": [
+      "United States",
+      "Australia",
+      "India",
+      "Canada and other countries"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Cross Europe Educational Consultancy Pvt. Ltd.",
+    "address": "Opposite Kumari Restaurant, Putalisadak, Kathmandu, Nepal",
+    "phone": "+977-01-4264025",
+    "website": null,
+    "email": "crosseurope.edu.consultancy@gmail.com",
+    "description": "Cross Europe Educational Consultancy provides advice and matches students to colleges and universities overseas. It offers scholarships and visa support and has representation in various European and Asian countries.",
+    "services": [
+      "Counselling",
+      "scholarship guidance",
+      "visa support",
+      "application assistance"
+    ],
+    "classes": [],
+    "countries": [
+      "Greece",
+      "USA",
+      "Australia",
+      "South Korea",
+      "Denmark",
+      "France",
+      "Italy",
+      "Malta",
+      "Japan and others"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Gama Education Consultancy",
+    "address": "Putalisadak, Kathmandu, Nepal",
+    "phone": "+977-01-4428839",
+    "website": "https://gamaeducation.com",
+    "email": "info@gamaeducation.com",
+    "description": "Gama Education Consultancy offers course selection, test preparation, application processing and visa assistance. It provides pre‑ and post‑departure support for students.",
+    "services": [
+      "Course selection",
+      "test preparation",
+      "application processing",
+      "visa assistance",
+      "pre‑ and post‑departure support"
+    ],
+    "classes": [
+      "TOEFL iBT",
+      "IELTS",
+      "SAT",
+      "GRE",
+      "GMAT",
+      "ACT",
+      "PTE"
+    ],
+    "countries": [
+      "United States",
+      "Australia",
+      "Canada",
+      "United Kingdom",
+      "New Zealand and others"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Mars Education Consultancy",
+    "address": "New Baneshwor, Kathmandu, Nepal",
+    "phone": "+977-01-4784910",
+    "website": "https://marseduconsultant.com",
+    "email": "info@marseduconsultant.com",
+    "description": "Mars Education Consultancy provides education counselling, test preparation, documentation, visa assistance and personality development training for students.",
+    "services": [
+      "Counselling",
+      "test preparation",
+      "documentation",
+      "visa assistance",
+      "personality development training"
+    ],
+    "classes": [
+      "IELTS",
+      "TOEFL",
+      "PTE",
+      "SAT",
+      "GRE",
+      "GMAT",
+      "ACT"
+    ],
+    "countries": [
+      "United Kingdom",
+      "United States",
+      "Canada",
+      "Germany",
+      "Australia",
+      "New Zealand and other destinations"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Avenue Education Consultancy",
+    "address": "New Baneshwor Chowk, Level 4, Kathmandu, Nepal",
+    "phone": "+977-01-4480660",
+    "website": "https://avenue.edu.np",
+    "email": "info@avenue.edu.np",
+    "description": "Avenue Education Consultancy offers counselling, test preparation, scholarship guidance, application processing, interview and visa assistance and pre‑departure support. It serves students for many countries.",
+    "services": [
+      "Counselling",
+      "test preparation",
+      "scholarship guidance",
+      "application processing",
+      "interview & visa assistance",
+      "pre‑departure support"
+    ],
+    "classes": [
+      "IELTS",
+      "PTE",
+      "TOEFL",
+      "SAT",
+      "GRE",
+      "GMAT"
+    ],
+    "countries": [
+      "Australia",
+      "Canada",
+      "United Kingdom",
+      "United States",
+      "New Zealand",
+      "Cyprus",
+      "Singapore",
+      "Finland",
+      "Switzerland",
+      "Norway",
+      "Germany",
+      "Denmark",
+      "Ireland"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Hima Aus Education Consultancy",
+    "address": "Madanbhandari Road, Min Bhawan, Kathmandu, Nepal",
+    "phone": "+977-01-4621230",
+    "website": "https://himaaus.com",
+    "email": "info@himaaus.com",
+    "description": "Hima Aus Education Consultancy helps students study in Australia, the UK and Canada with step‑by‑step counselling and visa assistance. It also provides training for language proficiency tests.",
+    "services": [
+      "Education counselling",
+      "visa application assistance",
+      "documentation guidance",
+      "pre‑ and post‑departure support"
+    ],
+    "classes": [
+      "PTE",
+      "IELTS",
+      "NAATI and other language proficiency classes"
+    ],
+    "countries": [
+      "Australia",
+      "United Kingdom",
+      "Canada",
+      "India and others"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Studylane International Pvt. Ltd.",
+    "address": "Bajra Complex Level 4, New Plaza, Putalisadak, Kathmandu, Nepal",
+    "phone": "+977-01-5906215",
+    "website": "https://www.studylanenepal.com",
+    "email": "info@studylanenepal.com",
+    "description": "Studylane International is an approved education consultancy with years of experience helping students achieve their dream of studying abroad. It simplifies the overseas education process and provides personalized support.",
+    "services": [
+      "Counselling",
+      "test preparation",
+      "documentation and application support",
+      "visa processing",
+      "pre‑ and post‑departure services"
+    ],
+    "classes": [
+      "IELTS",
+      "PTE and other test preparation"
+    ],
+    "countries": [
+      "Australia",
+      "Canada",
+      "United States",
+      "United Kingdom",
+      "New Zealand and others"
+    ],
+    "logoUrl": "https://www.studylanenepal.com/storage/studylane/files/5/Study"
+  },
+  {
+    "name": "Lane copy-04.png",
+    "coverUrl": "https://www.studylanenepal.com/storage/studylane/files/1/Galleries/premises/IMG_0084.jpg"
+  },
+  {
+    "name": "Nebraska Education Consultancy (NEC)",
+    "address": "Putalisadak / New Baneshwor, Kathmandu, Nepal",
+    "phone": "015910770 / 015910776",
+    "website": "https://www.nepalec.edu.np",
+    "email": "inquiry@nepalec.edu.np",
+    "description": "Established in 2001, Nepal Education Consultancy (NEC) is one of the pioneers of study‑abroad counselling in Nepal. It provides comprehensive guidance for studying in destinations such as Australia, USA, UK, Canada and the Netherlands.",
+    "services": [
+      "Counselling",
+      "test preparation",
+      "application assistance",
+      "visa processing",
+      "pre‑departure support"
+    ],
+    "classes": [
+      "IELTS",
+      "PTE",
+      "SAT",
+      "TOEFL and other test prep"
+    ],
+    "countries": [
+      "Australia",
+      "United States",
+      "United Kingdom",
+      "Canada",
+      "Netherlands and other countries"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Alfa Beta Education Consultancy",
+    "address": "New Baneshwor, Kathmandu, Nepal",
+    "phone": "+977-01-5970123",
+    "website": "https://alfabetaedu.com",
+    "email": "info@alfabetaedu.com",
+    "description": "Alfa Beta Education Consultancy has over three decades of expertise and represents more than 500 institutions across 18 countries. It offers counselling, test preparation, application assistance and visa processing.",
+    "services": [
+      "Counselling",
+      "test preparation",
+      "application assistance",
+      "visa processing",
+      "scholarship guidance"
+    ],
+    "classes": [
+      "IELTS",
+      "PTE",
+      "GRE",
+      "TOEFL",
+      "CAE"
+    ],
+    "countries": [
+      "China",
+      "Germany",
+      "Australia",
+      "Canada",
+      "United Kingdom and other countries"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Pyramid Consultancy",
+    "address": "Building 112, Bagbazar 28, Kathmandu, Nepal",
+    "phone": "01-4167619, 9801986381, 9801986382",
+    "website": "https://thepyramidconsultancy.com",
+    "email": "info@thepyramidconsultancy.com",
+    "description": "Pyramid Consultancy is a government‑registered education consultancy recognised for guiding students to institutions overseas. It emphasises transparency, reliability and integrity and represents universities in Australia, Canada, USA, UK, Cyprus and Malta.",
+    "services": [
+      "Counselling",
+      "test preparation",
+      "application processing",
+      "documentation and visa services"
+    ],
+    "classes": [
+      "IELTS",
+      "PTE and other test preparation"
+    ],
+    "countries": [
+      "Australia",
+      "Canada",
+      "United States",
+      "United Kingdom",
+      "Cyprus",
+      "Malta and other countries"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "The Next Education Consultancy",
+    "address": "New Baneshwor, Kathmandu, Nepal",
+    "phone": "015970268",
+    "website": "https://thenext.edu.np",
+    "email": "info@thenext.edu.np",
+    "description": "The Next Education Consultancy has a long‑standing reputation as one of the most comprehensive study‑abroad consultants in Nepal. It guides students to the best institutions and emphasises excellence, integrity, collaboration, innovation and empowerment.",
+    "services": [
+      "Counselling",
+      "university selection",
+      "test preparation",
+      "visa processing",
+      "scholarship guidance"
+    ],
+    "classes": [
+      "IELTS",
+      "PTE",
+      "TOEFL",
+      "SAT",
+      "GRE",
+      "GMAT"
+    ],
+    "countries": [
+      "Australia",
+      "Canada",
+      "United Kingdom",
+      "United States",
+      "New Zealand and other destinations"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Right and Associates Education Consultancy",
+    "address": "Level 4, AB Complex, Ramshah Path, Putalisadak, Kathmandu, Nepal",
+    "phone": "(977) 1-5333843",
+    "website": "https://rassociates.edu.np",
+    "email": "kathmandu@rassociates.com.au",
+    "description": "Right and Associates is a premier education consultancy with a national presence across nine locations in Nepal. It provides comprehensive study‑abroad services and has branches in Kathmandu, Pokhara, Chitwan, Butwal and other cities.",
+    "services": [
+      "Study abroad counselling",
+      "test preparation",
+      "application support",
+      "visa services",
+      "scholarship guidance"
+    ],
+    "classes": [
+      "IELTS",
+      "PTE",
+      "GRE",
+      "TOEFL",
+      "SAT and other test prep programmes"
+    ],
+    "countries": [
+      "United States",
+      "United Kingdom",
+      "Australia",
+      "Canada and other countries"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Univa Education Consultancy",
+    "address": "Putalisadak, Kathmandu, Nepal",
+    "phone": "+977-01-5319152 / 9851060545",
+    "website": "https://www.univaeducation.com",
+    "email": "info@univaeducation.com",
+    "description": "Univa Education Pvt. Ltd., established in 2011, is a reputable consultancy helping students achieve international education goals. With 15+ years of experience, it offers end‑to‑end guidance from career counselling and university selection to visa assistance and pre‑departure support.",
+    "services": [
+      "Career counselling",
+      "study abroad guidance",
+      "application support",
+      "visa assistance",
+      "test preparation",
+      "pre‑departure counselling"
+    ],
+    "classes": [
+      "IELTS",
+      "PTE",
+      "SAT",
+      "GRE",
+      "GMAT and other test prep courses"
+    ],
+    "countries": [
+      "Australia",
+      "New Zealand",
+      "Canada",
+      "United States",
+      "United Kingdom",
+      "France",
+      "Malta",
+      "South Korea",
+      "Japan"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "PEC Global (Preferred EduVisa Consultancy)",
+    "address": "Opposite Hyatt Hotel Entrance, Boudha, Kathmandu, Nepal",
+    "phone": "01-5919335",
+    "website": "https://thepecglobal.com",
+    "email": "info@thepecglobal.com",
+    "description": "PEC Global offers expert advice and study‑abroad services to help students study in top universities in Australia, USA, UK, Canada and more. It provides appointment‑based counselling and personalised guidance.",
+    "services": [
+      "Visa application assistance",
+      "career counselling",
+      "post‑study work visa guidance",
+      "scholarship and financial guidance",
+      "personalised counselling"
+    ],
+    "classes": [
+      "PTE",
+      "IELTS and other test preparation"
+    ],
+    "countries": [
+      "Australia",
+      "United Kingdom",
+      "United States",
+      "Canada",
+      "New Zealand"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Sajilo Visa Education Consultancy",
+    "address": "Subhidhanagar, Tinkune, Kathmandu, Nepal",
+    "phone": "+977-9761744542 / 01-5199100 / 9705999999",
+    "website": "https://sajilovisa.com",
+    "email": "info@sajilovisa.com",
+    "description": "Sajilo Visa Education Consultancy provides a hassle‑free online abroad study service. It offers a mobile app with a visa probability checker and simplifies the application process, allowing students to upload documents via the app.",
+    "services": [
+      "Online application services",
+      "visa probability checker",
+      "document uploading",
+      "counselling and visa support"
+    ],
+    "classes": [
+      "IELTS and other test preparation via partner academy"
+    ],
+    "countries": [
+      "United Kingdom",
+      "United States",
+      "Canada",
+      "Australia",
+      "New Zealand and other destinations"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Study Abroad Education Consultancy",
+    "address": "Bagbazar, Kathmandu, Nepal",
+    "phone": "+977-982-0150755",
+    "website": "https://www.studyabroadeducation.com.np",
+    "email": "info@studyabroadeducation.com.np",
+    "description": "Study Abroad Education Consultancy is a leading consultancy based in Gongabu/Bagbazar, Kathmandu. It provides comprehensive support for every aspect of the study‑abroad process, from course counselling and university selection to visa application and post‑arrival support.",
+    "services": [
+      "Course counselling",
+      "university selection",
+      "visa application assistance",
+      "post‑arrival support",
+      "scholarship guidance"
+    ],
+    "classes": [
+      "IELTS",
+      "TOEFL",
+      "PTE and other test preparation"
+    ],
+    "countries": [
+      "United States",
+      "United Kingdom",
+      "Australia",
+      "Canada",
+      "New Zealand"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Niagara Falls Education Consultancy (NFEC)",
+    "address": "Baneshwor Plaza, New Baneshwor, Kathmandu, Nepal",
+    "phone": "01-4588890 / +977-9841317442",
+    "website": "https://niagarafallsconsultancy.edu.np",
+    "email": "info@niagarafallsconsultancy.edu.np",
+    "description": "Niagara Falls Education Consultancy is a reputed consultancy providing thorough guidance and support to students pursuing education abroad. It offers personalised services, helps select institutions and locations, and maintains strong agreements with educational institutions worldwide.",
+    "services": [
+      "Personalised counselling",
+      "university and location selection",
+      "documentation help",
+      "visa support",
+      "pre‑ and post‑departure services"
+    ],
+    "classes": [
+      "IELTS",
+      "PTE and other language test preparation"
+    ],
+    "countries": [
+      "Canada",
+      "Australia",
+      "United Kingdom",
+      "United States",
+      "New Zealand"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "Alphabet Education Consultancy (AEC)",
+    "address": "Bagbazar – 28, Kathmandu, Nepal",
+    "phone": "01-4226263 / 9841132157 / 9823594647",
+    "website": "https://alphabeteduconsultancy.com",
+    "email": "info@alphabeteduconsultancy.com",
+    "description": "Alphabet Education Consultancy Pvt. Ltd. was established in 2019 to provide quality service to students seeking qualifications from overseas. It assists students with inclusive information about study opportunities and has trained counsellors for destinations like Australia, USA, UK, Canada, Japan and Europe.",
+    "services": [
+      "Career counselling",
+      "test preparation classes",
+      "student screening",
+      "university application",
+      "documentation guideline",
+      "interview assistance",
+      "visa processing",
+      "scholarship guidance",
+      "pre‑departure briefing",
+      "post‑arrival support"
+    ],
+    "classes": [
+      "Japanese language classes",
+      "IELTS",
+      "Korean language",
+      "English language and other test preparation"
+    ],
+    "countries": [
+      "Australia",
+      "United States",
+      "United Kingdom",
+      "Canada",
+      "Japan",
+      "Europe (including Cyprus)"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  },
+  {
+    "name": "NIEC (National International Educational Consultancy)",
+    "address": "4th & 5th Floor, Share Market Complex, Putalisadak, Kathmandu, Nepal",
+    "phone": "+977-9801030907 / +977-01-5356600",
+    "website": "https://www.niec.edu.np",
+    "email": "info@niec.edu.np",
+    "description": "NIEC counsels prospective students for higher education in foreign countries and provides necessary information about colleges, universities and visa processing. Its well‑trained counsellors guide students for studying in the USA, UK, Australia, New Zealand, Ireland and Canada.",
+    "services": [
+      "Counselling",
+      "test preparation",
+      "visa processing",
+      "application assistance"
+    ],
+    "classes": [
+      "IELTS",
+      "TOEFL",
+      "PTE-A",
+      "GMAT",
+      "GRE",
+      "Digital SAT"
+    ],
+    "countries": [
+      "United States",
+      "United Kingdom",
+      "Australia",
+      "Canada",
+      "New Zealand",
+      "Ireland",
+      "Germany and other countries"
+    ],
+    "logoUrl": null,
+    "coverUrl": null
+  }
+]

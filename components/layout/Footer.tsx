@@ -7,11 +7,11 @@ export function Footer() {
     return (
         <footer className="bg-white border-t border-slate-100 pt-20 pb-10">
             <div className="max-w-[1440px] mx-auto px-6 lg:px-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Branding & Bio */}
                     <div className="lg:col-span-2">
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="relative w-[350px] h-20">
+                            <div className="relative w-[200px] sm:w-[350px] h-12 sm:h-20">
                                 <Image
                                     src="/logo.png"
                                     alt="ConsultancyKhabar"
@@ -40,23 +40,14 @@ export function Footer() {
                         <h4 className="font-bold text-slate-900 mb-6 font-heading text-lg">Quick Links</h4>
                         <ul className="space-y-4">
                             <li><Link href="/" className="text-sm text-slate-500 hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-primary transition-colors"></span> Home</Link></li>
-                            <li><Link href="/about" className="text-sm text-slate-500 hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-primary transition-colors"></span> About Us</Link></li>
+
                             <li><Link href="/methodology" className="text-sm text-slate-500 hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-primary transition-colors"></span> Ranking Methodology</Link></li>
                             <li><Link href="/process-updates" className="text-sm text-slate-500 hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-primary transition-colors"></span> Visa Updates</Link></li>
                             <li><Link href="/blog" className="text-sm text-slate-500 hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-primary transition-colors"></span> Blog</Link></li>
                         </ul>
                     </div>
 
-                    {/* Top Services */}
-                    <div>
-                        <h4 className="font-bold text-slate-900 mb-6 font-heading text-lg">Top Services</h4>
-                        <ul className="space-y-4">
-                            <li><Link href="/services/test-prep" className="text-sm text-slate-500 hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-primary transition-colors"></span> Test Preparation</Link></li>
-                            <li><Link href="/services/visa-counseling" className="text-sm text-slate-500 hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-primary transition-colors"></span> Visa Counseling</Link></li>
-                            <li><Link href="/services/documentation" className="text-sm text-slate-500 hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-primary transition-colors"></span> Documentation</Link></li>
-                            <li><Link href="/services/scholarship" className="text-sm text-slate-500 hover:text-primary transition-colors flex items-center gap-2 group"><span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-primary transition-colors"></span> Scholarship Aid</Link></li>
-                        </ul>
-                    </div>
+
                     {/* Contact Us */}
                     <div>
                         <h4 className="font-bold text-slate-900 mb-6 font-heading text-lg">Contact Us</h4>

@@ -67,7 +67,7 @@ export const SERVICE_DETAIL_QUERY = groq`
 
 // Countries
 export const COUNTRY_LIST_QUERY = groq`
-  *[_type == "country"] | order(isFeatured desc, name asc) {
+  *[_type == "country" && defined(flagImage)] | order(isFeatured desc, name asc) {
     _id,
     name,
     slug,

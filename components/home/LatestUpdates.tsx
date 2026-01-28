@@ -6,7 +6,7 @@ export function LatestUpdates() {
         <section className="mb-24">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2">
-                    <h2 className="text-3xl font-bold mb-8 text-slate-900 flex items-center gap-3 font-heading tracking-tight">
+                    <h2 className="text-2xl md:text-3xl font-bold mb-8 text-slate-900 flex items-center gap-3 font-heading tracking-tight">
                         <span className="p-2 bg-primary/10 rounded-lg">
                             <AnimatedIcon icon={Newspaper} className="h-6 w-6 text-primary" />
                         </span>
@@ -53,18 +53,18 @@ export function LatestUpdates() {
                 </div>
 
                 {/* Subscribe Section */}
-                <div className="bg-primary p-8 rounded-3xl text-white relative overflow-hidden h-fit shadow-2xl shadow-primary/20">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-accent/20 rounded-full blur-xl translate-y-1/2 -translate-x-1/2"></div>
+                <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] relative overflow-hidden h-fit group">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/10 transition-colors duration-500"></div>
+                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-500/5 rounded-full blur-xl translate-y-1/2 -translate-x-1/2 group-hover:bg-blue-500/10 transition-colors duration-500"></div>
 
-                    <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-white mb-6 rotate-3 border border-white/20">
-                        <AnimatedIcon icon={Mail} className="h-7 w-7 text-white" />
+                    <div className="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center text-primary mb-6 rotate-3 border border-primary/10 group-hover:rotate-6 transition-transform duration-300">
+                        <AnimatedIcon icon={Mail} className="h-7 w-7 text-primary" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-3 font-heading">Get Weekly Updates</h3>
-                    <p className="text-white/80 text-sm mb-8 leading-relaxed">Join 10k+ students getting the latest visa news directly in their inbox. Updates on policy changes and scholarship deadlines.</p>
+                    <h3 className="text-2xl font-bold mb-3 font-heading text-slate-900">Get Weekly Updates</h3>
+                    <p className="text-slate-500 text-sm mb-8 leading-relaxed">Join 10k+ students getting the latest visa news directly in their inbox. Updates on policy changes and scholarship deadlines.</p>
                     <div className="w-full space-y-4 relative z-10">
-                        <input className="w-full h-12 rounded-xl border-0 bg-white/10 backdrop-blur placeholder:text-white/50 px-4 focus:ring-2 focus:ring-white/50 text-white text-sm transition-all" placeholder="Your email address" type="email" />
-                        <button className="w-full h-12 bg-white text-primary font-bold rounded-xl hover:shadow-[0_4px_20px_rgb(255,255,255,0.3)] hover:-translate-y-0.5 transition-all active:translate-y-0">Subscribe Now</button>
+                        <input className="w-full h-12 rounded-xl border border-slate-200 bg-slate-50 px-4 focus:ring-2 focus:ring-primary/20 focus:border-primary text-slate-900 text-sm transition-all placeholder:text-slate-400 outline-none hover:bg-white focus:bg-white" placeholder="Your email address" type="email" />
+                        <button className="w-full h-12 bg-primary text-white font-bold rounded-xl hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 transition-all active:translate-y-0">Subscribe Now</button>
                     </div>
                 </div>
             </div>

@@ -1,19 +1,19 @@
-import type { Metadata } from 'next'
-import { Outfit, Plus_Jakarta_Sans } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { OrganizationJsonLd } from '@/components/seo/JsonLd'
 
-const outfit = Outfit({
-  subsets: ['latin'],
-  variable: '--font-outfit',
-  display: 'swap',
-})
-
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-jakarta',
+  display: 'swap',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
   display: 'swap',
 })
 
@@ -65,6 +65,12 @@ export const metadata: Metadata = {
   },
 }
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#ffffff',
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -72,10 +78,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="light">
-      <body className={`${jakarta.variable} ${outfit.variable} antialiased bg-background text-slate-900`}>
+      <body className={`${inter.variable} ${jakarta.variable} antialiased bg-background text-slate-900 overflow-x-hidden w-full max-w-[100vw] relative`}>
         <OrganizationJsonLd />
         <Navbar />
-        <main className="flex-1">
+        <main className="flex-1 w-full max-w-[100vw]">
           {children}
         </main>
         <Footer />

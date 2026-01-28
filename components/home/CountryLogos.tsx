@@ -42,7 +42,7 @@ export async function CountryLogos() {
                 <p className="text-slate-500 font-medium">Trusted by students applying to</p>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 sm:gap-x-12 gap-y-8 transition-all duration-500">
                 {countries.map((country) => (
                     <Link
                         key={country._id}
@@ -61,7 +61,7 @@ export async function CountryLogos() {
                                 <span className="text-xs font-bold text-slate-400">{country.name.substring(0, 2).toUpperCase()}</span>
                             )}
                         </div>
-                        <span className="text-sm font-semibold text-slate-400 group-hover:text-slate-800 transition-colors uppercase tracking-wider">{country.name}</span>
+                        <span className="text-sm font-semibold text-slate-600 group-hover:text-primary transition-colors uppercase tracking-wider">{country.name}</span>
                     </Link>
                 ))}
             </div>
