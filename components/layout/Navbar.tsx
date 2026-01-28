@@ -39,7 +39,7 @@ export function Navbar() {
                     <div className="flex items-center justify-between gap-8">
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-3 shrink-0 group">
-                            <div className="relative w-[280px] h-14 group-hover:scale-105 transition-transform duration-300">
+                            <div className="relative w-[350px] h-16 group-hover:scale-105 transition-transform duration-300">
                                 <Image
                                     src="/logo.png"
                                     alt="ConsultancyKhabar"

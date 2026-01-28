@@ -11,7 +11,7 @@ export function Footer() {
                     {/* Branding & Bio */}
                     <div className="lg:col-span-2">
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="relative w-[500px] h-24">
+                            <div className="relative w-[350px] h-20">
                                 <Image
                                     src="/logo.png"
                                     alt="ConsultancyKhabar"
