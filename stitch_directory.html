@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Consultancy Directory - StudyAbroad Nepal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Select SVG from component list */
+        .custom-select {
+            --select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(76,108,154)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');
+            background-image: var(--select-button-svg);
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+        }
+        /* Custom Checkbox Tick SVG from component list */
+        .custom-checkbox {
+            --checkbox-tick-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27white%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e');
+        }
+        .custom-checkbox:checked {
+            background-image: var(--checkbox-tick-svg);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"></path>
+</svg>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">StudyAbroad Nepal</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-primary transition-colors border-b-2 border-primary py-5" href="#">Consultancies</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Resources</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg font-semibold text-sm transition-all">Sign In</button>
+</nav>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Sidebar Filters -->
+<aside class="w-full lg:w-72 flex-shrink-0">
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-6 sticky top-24">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-lg font-bold">Filters</h2>
+<button class="text-primary text-xs font-semibold hover:underline">Reset All</button>
+</div>
+<!-- Sort By -->
+<div class="mb-6">
+<label class="block text-sm font-semibold mb-2">Sort By</label>
+<select class="custom-select w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm p-3 appearance-none focus:ring-primary focus:border-primary">
+<option>Popularity</option>
+<option>Highest Rating</option>
+<option>Newest Listed</option>
+<option>Name (A-Z)</option>
+</select>
+</div>
+<div class="space-y-6">
+<!-- Services Checkbox List -->
+<div>
+<div class="flex items-center gap-2 mb-3 text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-sm">work</span>
+<span class="font-semibold text-sm">Services</span>
+</div>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="custom-checkbox h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">IELTS/PTE Coaching</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="custom-checkbox h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Visa Processing</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="custom-checkbox h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Documentation</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="custom-checkbox h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Interview Prep</span>
+</label>
+</div>
+</div>
+<!-- Countries Checkbox List -->
+<div>
+<div class="flex items-center gap-2 mb-3 text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-sm">public</span>
+<span class="font-semibold text-sm">Countries</span>
+</div>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="custom-checkbox h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Australia</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="custom-checkbox h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">USA</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="custom-checkbox h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Canada</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="custom-checkbox h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">UK</span>
+</label>
+</div>
+</div>
+<!-- Cities Checkbox List -->
+<div>
+<div class="flex items-center gap-2 mb-3 text-slate-900 dark:text-white">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="font-semibold text-sm">Cities</span>
+</div>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="custom-checkbox h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Kathmandu</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="custom-checkbox h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-primary transition-colors">Pokhara</span>
+</label>
+</div>
+</div>
+<!-- Verified Toggle -->
+<div class="pt-4 border-t border-slate-200 dark:border-slate-800">
+<label class="flex items-center justify-between cursor-pointer">
+<span class="text-sm font-semibold">Verified Only</span>
+<div class="relative inline-flex items-center">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</div>
+</label>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-1">
+<!-- Search and Stats Header -->
+<div class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h1 class="text-2xl font-bold">All Consultancies</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Showing 124 verified education partners in Nepal</p>
+</div>
+<div class="relative max-w-md w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Search by name or keyword..." type="text"/>
+</div>
+</div>
+<!-- Consultancy Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-xl transition-all group flex flex-col">
+<div class="flex items-start justify-between mb-4">
+<div class="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="Modern blue and white education agency logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4xKILQbKJiPkaGI8KzGmsloYjTGTHvNPDpwi6T9WYmVtQ-6OrK9r4NlDwDAGzAye44A2YDEOrLGBINWW_ELMVJQBL7SPhJ0wsGVKdKgT4Sg8yW__FsYBnWASqsGVGoAnZ5IOltvjuBNf42VmRUidDcT874JHdqzcJ1mr-P-1MW6b1Lcbnw2zDvnX755ZwXSRVULldt_sUcM6S4xy-jAk4r4Wk_TmXyRPCStJcEf0FGmxbuwUITs3ac7_n8LSBsocgAWHliMSggUX1"/>
+</div>
+<span class="flex items-center gap-1 bg-primary/10 text-primary px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified
+                            </span>
+</div>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Global Education Hub</h3>
+<div class="flex items-center gap-1 mb-3">
+<span class="material-symbols-outlined text-yellow-400 text-sm fill-1">star</span>
+<span class="text-sm font-bold">4.9</span>
+<span class="text-slate-400 text-xs font-normal">(420 reviews)</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Kathmandu</span>
+<span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Lalitpur</span>
+<span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Australia</span>
+</div>
+<div class="mt-auto">
+<button class="w-full bg-primary hover:bg-primary/90 text-white py-2.5 rounded-lg text-sm font-semibold transition-all">View Profile</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-xl transition-all group flex flex-col">
+<div class="flex items-start justify-between mb-4">
+<div class="w-16 h-16 rounded-lg bg-green-500/10 flex items-center justify-center overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="Corporate minimalist professional green logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMxZ8jq1M7r-tyWAbUBmIU8uLJKWQSctdux5by_dJAHxIFLVCK2NggjVqohGF6gdxjZx4r_oItOz_XrfMChTPTqr8hQNQwuuNwXEKqmqgZIvSihfiFpTihcOHu1LaRXCdsNiAn1zEH5ZgZEdme7aac9ZPXkU-JpEfvyZ-VI_eHgXuhyrQGmrRBcntaktPL-gzCGLLKoIJ9RfugUxq-dsFuViV6ZBDbIbjj9m2uU_FN4gdC8G5U7gHUw45DWYXbI22rdZfl3cJZCsbG"/>
+</div>
+<span class="flex items-center gap-1 bg-primary/10 text-primary px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified
+                            </span>
+</div>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Avenue Education</h3>
+<div class="flex items-center gap-1 mb-3">
+<span class="material-symbols-outlined text-yellow-400 text-sm fill-1">star</span>
+<span class="text-sm font-bold">4.7</span>
+<span class="text-slate-400 text-xs font-normal">(215 reviews)</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Pokhara</span>
+<span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">USA</span>
+<span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Canada</span>
+</div>
+<div class="mt-auto">
+<button class="w-full bg-primary hover:bg-primary/90 text-white py-2.5 rounded-lg text-sm font-semibold transition-all">View Profile</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-xl transition-all group flex flex-col">
+<div class="flex items-start justify-between mb-4">
+<div class="w-16 h-16 rounded-lg bg-orange-500/10 flex items-center justify-center overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="Modern educational icon orange logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQGfU3milee4Y_IIesrumMH9TSSt6UUaZTogSJDfem6_8rNT3457aqsMDs_qqO_OoSAhCO5dJCjAI84_88WqRaamJpFyl0b2IKNONJfevngW9prDThFbhVE1Dk1XCi56O9Ad6WnJFvCKFlvnkDRugwQNsL-t8j5PT7eda-Qruc58QtyuGbv7ODw6MaGTIkEr-fsdw4IoyteKTvybvp1PXIE3N3AKSFq4tlVAmtJz1zgNIhC40n8YotDFcpsEfhRdeDsG2T1ljsttDP"/>
+</div>
+<span class="flex items-center gap-1 bg-primary/10 text-primary px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified
+                            </span>
+</div>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Summit Consultants</h3>
+<div class="flex items-center gap-1 mb-3">
+<span class="material-symbols-outlined text-yellow-400 text-sm fill-1">star</span>
+<span class="text-sm font-bold">4.8</span>
+<span class="text-slate-400 text-xs font-normal">(189 reviews)</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Kathmandu</span>
+<span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">UK</span>
+<span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Germany</span>
+</div>
+<div class="mt-auto">
+<button class="w-full bg-primary hover:bg-primary/90 text-white py-2.5 rounded-lg text-sm font-semibold transition-all">View Profile</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-xl transition-all group flex flex-col">
+<div class="flex items-start justify-between mb-4">
+<div class="w-16 h-16 rounded-lg bg-red-500/10 flex items-center justify-center overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="Red abstract geometric education logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVwD5vnSucIaL6hUW4C9t9V_N0SfU7C8KFMJ3int1B-Q4UyuwtxROfeYHhUgipRJcFK9eu3XPe7xh6MCyjcVln8CRnkpcl5eqDZr09ddvpWNrNmvXdFDV6hql4DLnbehbMAInuoZh9Yw2pGdsabmqRgCXL8OtIo9lAr1S7BkW_BFAws5_8eySJ2NPD3fHkDz-YaqQ3ZgIzXgD_7XrFG5UNpwa9XqWoIIbmMcDX4dH223_AmODtbgFQ6eXTAah8NgmvetHuloxUHsuo"/>
+</div>
+<span class="flex items-center gap-1 bg-primary/10 text-primary px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified
+                            </span>
+</div>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Bright Career Int'l</h3>
+<div class="flex items-center gap-1 mb-3">
+<span class="material-symbols-outlined text-yellow-400 text-sm fill-1">star</span>
+<span class="text-sm font-bold">4.5</span>
+<span class="text-slate-400 text-xs font-normal">(94 reviews)</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Butwal</span>
+<span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">USA</span>
+</div>
+<div class="mt-auto">
+<button class="w-full bg-primary hover:bg-primary/90 text-white py-2.5 rounded-lg text-sm font-semibold transition-all">View Profile</button>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-xl transition-all group flex flex-col">
+<div class="flex items-start justify-between mb-4">
+<div class="w-16 h-16 rounded-lg bg-indigo-500/10 flex items-center justify-center overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="Modern high tech office logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvq93aRxeZkRxA_Lfq9FCpuktG6Rz1XrYv5UwFM1J0gsAj4azQ0F6jP9UgweWcL8s-F4uhIAO-jHyUSfZiLheo-SJusFYcJfpuGsuSPRX8Iak_HDZ0HF788ddKIw8rB3TQAM04EoQT4uCnOx1M5S-8dNjx0M6Q5yNV8xB8gZAW4dHW85foAHDTZUyhGwGdiCjq1QY_fPrMS4NUZCWLT9VTiQUn7mGSJQJkezLx5hmQgBLc8COuKpksg-8vuT9YHZHwps5nco76GddE"/>
+</div>
+<span class="flex items-center gap-1 bg-primary/10 text-primary px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified
+                            </span>
+</div>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Pathway Nepal</h3>
+<div class="flex items-center gap-1 mb-3">
+<span class="material-symbols-outlined text-yellow-400 text-sm fill-1">star</span>
+<span class="text-sm font-bold">4.6</span>
+<span class="text-slate-400 text-xs font-normal">(112 reviews)</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Kathmandu</span>
+<span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Japan</span>
+<span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Canada</span>
+</div>
+<div class="mt-auto">
+<button class="w-full bg-primary hover:bg-primary/90 text-white py-2.5 rounded-lg text-sm font-semibold transition-all">View Profile</button>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-5 hover:shadow-xl transition-all group flex flex-col">
+<div class="flex items-start justify-between mb-4">
+<div class="w-16 h-16 rounded-lg bg-teal-500/10 flex items-center justify-center overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="Professional network and people logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIW7FPOc-hFqpw4y6aSXs_M6DObhFsawQQz6rfMwHzP3l-z-lcDSTblvutn_Vahq90B0-LBDhsyR0zR3gVqzcVgkwVifZRIhaEC3UqOZii1uSTFxlpkGLn5TC1uG5uhJAb3fpSUSPptaLUD1qOBNCXukpzj_5YhiJ605gIhQxOXtMZjgZMX4Cryns4PqoYjjsP7DViJslQzs-7x2bXw2FMEY__5gsmfT4LcyCejQKFKMGikSQJC2_dMcSUP6BqLME1QfKSHfdXXug0"/>
+</div>
+<span class="flex items-center gap-1 bg-primary/10 text-primary px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified
+                            </span>
+</div>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Vision Education</h3>
+<div class="flex items-center gap-1 mb-3">
+<span class="material-symbols-outlined text-yellow-400 text-sm fill-1">star</span>
+<span class="text-sm font-bold">4.9</span>
+<span class="text-slate-400 text-xs font-normal">(356 reviews)</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Lalitpur</span>
+<span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Australia</span>
+<span class="text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">UK</span>
+</div>
+<div class="mt-auto">
+<button class="w-full bg-primary hover:bg-primary/90 text-white py-2.5 rounded-lg text-sm font-semibold transition-all">View Profile</button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<nav class="mt-12 flex items-center justify-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-primary/5 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-primary/5 hover:text-primary transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-primary/5 hover:text-primary transition-colors">3</button>
+<span class="px-2 text-slate-400">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-primary/5 hover:text-primary transition-colors">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-primary/5 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</nav>
+</div>
+</div>
+</main>
+<!-- Footer for context -->
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-20 py-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3">
+<div class="text-primary opacity-50">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"></path>
+</svg>
+</div>
+<span class="text-sm font-semibold text-slate-500">© 2024 StudyAbroad Nepal. All rights reserved.</span>
+</div>
+<div class="flex gap-8 text-xs font-medium text-slate-500">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Cookie Policy</a>
+</div>
+</div>
+</footer>
+</body></html>
