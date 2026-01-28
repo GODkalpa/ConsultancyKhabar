@@ -35,11 +35,11 @@ export function Navbar() {
 
             {/* Main Navigation Bar */}
             <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-200/60 shadow-sm supports-[backdrop-filter]:bg-white/60">
-                <div className="max-w-[1440px] mx-auto px-6 lg:px-20 py-2">
+                <div className="max-w-[1440px] mx-auto px-6 lg:px-20 py-4">
                     <div className="flex items-center justify-between gap-8">
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-3 shrink-0 group">
-                            <div className="relative w-[500px] h-20 group-hover:scale-105 transition-transform duration-300">
+                            <div className="relative w-[280px] h-14 group-hover:scale-105 transition-transform duration-300">
                                 <Image
                                     src="/logo.png"
                                     alt="ConsultancyKhabar"
