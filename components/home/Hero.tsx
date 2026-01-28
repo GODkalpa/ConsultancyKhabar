@@ -4,7 +4,7 @@ import { AnimatedIcon } from '@/components/ui/AnimatedIcon'
 
 export function Hero() {
     return (
-        <section className="mb-12">
+        <section className="mb-0">
             <div
                 className="relative overflow-hidden rounded-2xl bg-cover bg-center min-h-[580px] flex flex-col items-center justify-center p-6 text-center shadow-2xl ring-1 ring-slate-900/5"
                 style={{ backgroundImage: 'linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDT2fNyb6U3OP9m9-HPdKyjtNj_p_3gsfKZyNkBTckTBm7zlWf1uZKoZ9cEwnsmEnV5kPd9Mv4c9Km2RzKClddf-9CKIDsfQ3SGvUto-6KvFR4JHDusnRREiVProerRfB1X_2H9_q9rJj7heO6zJP4V7JW3tx75UyYp-JSgrmKZvJmTucHbAkUFxmH8LV-Pa2hkR90ZOPE_c3LiqjNR3Tdv8i33JGSLZxkQGV_C5Gw03fzkzvEezs-5Uub3t7W8hoIUHCVnmngsTfx_")' }}

@@ -1,19 +1,11 @@
 import Link from 'next/link'
-import { Users, GraduationCap, Calendar, ArrowRight } from 'lucide-react'
+import { Users, GraduationCap, Calendar, ArrowRight, Globe } from 'lucide-react'
+import { getAllCountries } from '@/lib/sanity/api'
+import { Country } from '@/lib/sanity/types'
 
-// Mock data - will be replaced with Sanity fetch
-const countries = [
-    { name: 'Australia', slug: 'australia', consultantCount: 45, flagEmoji: '🇦🇺', description: 'World-class universities and vibrant multicultural cities.', intakes: ['February', 'July'] },
-    { name: 'Canada', slug: 'canada', consultantCount: 38, flagEmoji: '🇨🇦', description: 'Excellent post-study work opportunities and quality of life.', intakes: ['September', 'January', 'May'] },
-    { name: 'United States', slug: 'united-states', consultantCount: 32, flagEmoji: '🇺🇸', description: "Home to the world's top-ranked universities and diverse programs.", intakes: ['Fall', 'Spring'] },
-    { name: 'United Kingdom', slug: 'united-kingdom', consultantCount: 28, flagEmoji: '🇬🇧', description: 'Rich academic heritage with globally recognized degrees.', intakes: ['September', 'January'] },
-    { name: 'Japan', slug: 'japan', consultantCount: 22, flagEmoji: '🇯🇵', description: 'Cutting-edge technology and unique cultural experience.', intakes: ['April', 'October'] },
-    { name: 'Germany', slug: 'germany', consultantCount: 18, flagEmoji: '🇩🇪', description: 'Free education at public universities and strong economy.', intakes: ['Winter', 'Summer'] },
-    { name: 'New Zealand', slug: 'new-zealand', consultantCount: 15, flagEmoji: '🇳🇿', description: 'Safe, welcoming environment with excellent work-study balance.', intakes: ['February', 'July'] },
-    { name: 'South Korea', slug: 'south-korea', consultantCount: 12, flagEmoji: '🇰🇷', description: 'Growing hub for technology and entertainment industries.', intakes: ['March', 'September'] },
-]
+export default async function CountriesPage() {
+    const countries: Country[] = await getAllCountries()
 
-export default function CountriesPage() {
     return (
         <main className="max-w-[1440px] mx-auto px-6 lg:px-20 py-12">
             {/* Header */}
@@ -27,38 +19,61 @@ export default function CountriesPage() {
             </div>
 
             {/* Countries Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {countries.map((country) => (
-                    <Link
-                        key={country.slug}
-                        href={`/countries/${country.slug}`}
-                        className="group relative overflow-hidden rounded-2xl bg-white border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                    >
-                        {/* Flag Emoji as Hero */}
-                        <div className="h-32 bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center text-6xl">
-                            {country.flagEmoji}
-                        </div>
-
-                        <div className="p-6">
-                            <h3 className="text-xl font-bold mb-2 font-heading text-slate-900 group-hover:text-primary transition-colors">
-                                {country.name}
-                            </h3>
-                            <p className="text-sm text-slate-500 leading-relaxed mb-4 line-clamp-2">
-                                {country.description}
-                            </p>
-
-                            <div className="flex items-center justify-between text-xs">
-                                <span className="flex items-center gap-1 text-slate-600">
-                                    <Users className="h-3.5 w-3.5" /> {country.consultantCount} consultants
-                                </span>
-                                <span className="flex items-center gap-1 text-primary font-semibold group-hover:translate-x-1 transition-transform">
-                                    Learn More <ArrowRight className="h-3.5 w-3.5" />
-                                </span>
+            {countries.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {countries.map((country) => (
+                        <Link
+                            key={country._id}
+                            href={`/countries/${country.slug?.current || ''}`}
+                            className="group relative overflow-hidden rounded-2xl bg-white border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                        >
+                            {/* Country Image or Flag */}
+                            <div className="h-32 bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center overflow-hidden">
+                                {country.flagImage?.url ? (
+                                    <img
+                                        src={country.flagImage.url}
+                                        alt={country.name}
+                                        className="w-full h-full object-cover"
+                                    />
+                                ) : (
+                                    <Globe className="h-12 w-12 text-slate-300" />
+                                )}
                             </div>
-                        </div>
-                    </Link>
-                ))}
-            </div>
+
+                            <div className="p-6">
+                                <h3 className="text-xl font-bold mb-2 font-heading text-slate-900 group-hover:text-primary transition-colors">
+                                    {country.name}
+                                </h3>
+
+                                {country.intakes && country.intakes.length > 0 && (
+                                    <p className="text-sm text-slate-500 leading-relaxed mb-4">
+                                        Intakes: {country.intakes.join(', ')}
+                                    </p>
+                                )}
+
+                                <div className="flex items-center justify-between text-xs">
+                                    {country.isFeatured && (
+                                        <span className="flex items-center gap-1 text-primary font-semibold">
+                                            Featured
+                                        </span>
+                                    )}
+                                    <span className="flex items-center gap-1 text-primary font-semibold group-hover:translate-x-1 transition-transform ml-auto">
+                                        Learn More <ArrowRight className="h-3.5 w-3.5" />
+                                    </span>
+                                </div>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            ) : (
+                <div className="text-center py-16">
+                    <div className="size-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <Globe className="h-10 w-10 text-slate-400" />
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-700 mb-2">No Countries Available</h3>
+                    <p className="text-slate-500">Countries will appear here once added in the CMS.</p>
+                </div>
+            )}
 
             {/* Info Section */}
             <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">

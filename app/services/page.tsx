@@ -1,23 +1,15 @@
 import Link from 'next/link'
-import { BookOpen, GraduationCap, FileText, ClipboardCheck, Globe, MonitorPlay, Briefcase, Languages } from 'lucide-react'
+import { BookOpen, GraduationCap, FileText, ClipboardCheck, Globe, MonitorPlay, Briefcase, Languages, LucideIcon } from 'lucide-react'
+import { getAllServices } from '@/lib/sanity/api'
+import { Service } from '@/lib/sanity/types'
 
-// Mock data - will be replaced with Sanity fetch
-const services = [
-    { title: 'IELTS Preparation', slug: 'ielts-preparation', description: 'Comprehensive IELTS coaching with experienced instructors and regular mock tests.', iconName: 'BookOpen' },
-    { title: 'PTE Academic', slug: 'pte-academic', description: 'State-of-the-art computer labs and personalized strategies for PTE success.', iconName: 'MonitorPlay' },
-    { title: 'Visa Counseling', slug: 'visa-counseling', description: 'Expert guidance on visa applications, documentation, and interview preparation.', iconName: 'ClipboardCheck' },
-    { title: 'University Admission', slug: 'university-admission', description: 'End-to-end support for university applications, from shortlisting to acceptance.', iconName: 'GraduationCap' },
-    { title: 'Documentation Support', slug: 'documentation-support', description: 'Professional assistance with all required documents and paperwork.', iconName: 'FileText' },
-    { title: 'Country Guidance', slug: 'country-guidance', description: 'In-depth information about study destinations, culture, and opportunities.', iconName: 'Globe' },
-    { title: 'Career Counseling', slug: 'career-counseling', description: 'Personalized career advice to help you choose the right path.', iconName: 'Briefcase' },
-    { title: 'Language Classes', slug: 'language-classes', description: 'Learn Japanese, Korean, German, and other languages for study abroad.', iconName: 'Languages' },
-]
-
-const iconMap: { [key: string]: React.ElementType } = {
+const iconMap: { [key: string]: LucideIcon } = {
     BookOpen, GraduationCap, FileText, ClipboardCheck, Globe, MonitorPlay, Briefcase, Languages
 }
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+    const services: Service[] = await getAllServices()
+
     return (
         <main className="max-w-[1440px] mx-auto px-6 lg:px-20 py-12">
             {/* Header */}
@@ -31,28 +23,38 @@ export default function ServicesPage() {
             </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {services.map((service) => {
-                    const IconComponent = iconMap[service.iconName] || BookOpen
-                    return (
-                        <Link
-                            key={service.slug}
-                            href={`/services/${service.slug}`}
-                            className="group p-8 rounded-2xl bg-white border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-primary/20"
-                        >
-                            <div className="size-14 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                                <IconComponent className="h-7 w-7" />
-                            </div>
-                            <h3 className="text-xl font-bold mb-3 font-heading text-slate-900 group-hover:text-primary transition-colors">
-                                {service.title}
-                            </h3>
-                            <p className="text-sm text-slate-500 leading-relaxed line-clamp-3">
-                                {service.description}
-                            </p>
-                        </Link>
-                    )
-                })}
-            </div>
+            {services.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {services.map((service) => {
+                        const IconComponent = iconMap[service.iconName || ''] || BookOpen
+                        return (
+                            <Link
+                                key={service._id}
+                                href={`/services/${service.slug?.current || ''}`}
+                                className="group p-8 rounded-2xl bg-white border border-slate-100 shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-primary/20"
+                            >
+                                <div className="size-14 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                    <IconComponent className="h-7 w-7" />
+                                </div>
+                                <h3 className="text-xl font-bold mb-3 font-heading text-slate-900 group-hover:text-primary transition-colors">
+                                    {service.title}
+                                </h3>
+                                <p className="text-sm text-slate-500 leading-relaxed line-clamp-3">
+                                    {service.description}
+                                </p>
+                            </Link>
+                        )
+                    })}
+                </div>
+            ) : (
+                <div className="text-center py-16">
+                    <div className="size-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <BookOpen className="h-10 w-10 text-slate-400" />
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-700 mb-2">No Services Available</h3>
+                    <p className="text-slate-500">Services will appear here once added in the CMS.</p>
+                </div>
+            )}
 
             {/* CTA Section */}
             <div className="mt-20 bg-primary rounded-3xl p-12 text-center text-white">
